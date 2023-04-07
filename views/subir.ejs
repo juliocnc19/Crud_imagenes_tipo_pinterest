@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+  	<%- include("./head.ejs") %>
+    <title>Subir Imagen</title>
+  </head>
+  <body>
+  <%- include("./navi.ejs") %>
+    <div class="container p-4">
+    	<div class="row">
+    		<div class="col-md-6 offset-md-3">
+    			<div class="card">
+    				<div class="card-body">
+    					<form action="/subir" method="POST" enctype="multipart/form-data">
+							<div class="input-group mb-3 p-2">
+  								<input type="file" class="form-control" id="inputGroupFile02" name="image">
+							</div>
+
+							<div class="form-group p-2">
+								<input type="text" name="title" placeholder="Title" class="form-control">
+							</div>
+
+							<div class="form-group p-2">
+								<textarea name="description" class="form-control" placeholder="Descripción de la imagen"></textarea>
+							</div>
+
+							<div class="form-group d-grid gap-2 p-2">
+								<button type="submit" class="btn btn-success btn-block">
+									Subir
+								</button>
+							</div>
+
+						</form>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+  </body>
+</html>
+
+
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Galeria</title>
+    <%- include("./head.ejs") %>
+  </head>
+  <body>
+  <%- include("./navi.ejs") %>
+    <div class="container p-4">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+        <%images.forEach(function(image){ %>
+        <div class="col">
+            <div class="card h-100">
+              <img src="<%=image.path%>" class="card-img-top img-fluid">
+              <div class="card-body">
+                <h5 class="card-title"><%=image.title%></h5>
+                <p class="card-text"><%=image.description%></p>
+                <p class="card-text"><%=format(image.date)%></p>
+                <a href="/image/<%=image._id%>" class="btn btn-primary">Ver imagen</a>
+              </div>
+            </div>
+        </div>
+        <%})%>
+      </div>
+    </div>
+
+
+  </body>
+</html>

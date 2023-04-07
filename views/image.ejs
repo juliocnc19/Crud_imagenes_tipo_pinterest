@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+  	<%- include("./head.ejs") %>
+    <title>Perfil de imagen</title>
+  </head>
+  <body>
+   <div class="container p-4 col-md-3">
+      <div class="row">
+        <div class="card-columns">
+            <div class="card">
+              <img src="<%=image.path%>" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title"><%=image.title%></h5>
+                <p class="card-text"><%=image.description%></p>
+                <p class="card-text"><%=format(image.date)%></p>
+                <a href="/image/<%=image._id%>/eliminar" class="btn btn-danger">Borrar imagen</a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
